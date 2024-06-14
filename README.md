@@ -1,5 +1,5 @@
 # MonoGame SDF Fonts
-This is an example of rendering Signed Distance Field Fonts in MonoGame.
+This is an example of rendering Signed Distance Field Fonts in MonoGame.  Someone smarter than me take this and do cool things.
 
 ## How to Install.
 1. Clone the source for this repository
@@ -74,3 +74,7 @@ See the [example project](./example/Game1.cs) for a complete example of how to u
 
 ## License
 **MonoGame.Sdf.Fonts** is licensed under the **MIT License**. Please refer to the [LICENSE](./LICENSE) file for full license text.
+
+## Credits
+- [MonoGame.Extended](https://github.com/craftworkgames/MonoGame.Extended).  The initial work by the original maintainers and contributors here on rendering BMfont and my work on parsing the AngleCode Bitmap Font Text file format.
+- The [libGDX](https://libgdx.com/) for the [Hiero tool](https://libgdx.com/wiki/tools/hiero) which provides a method of exporting Distance Field fonts in the AngleCode Bitmap Font file format and the [rendering documentation](https://libgdx.com/wiki/graphics/2d/fonts/distance-field-fonts) where the initial shader code was modified from.
