@@ -30,6 +30,8 @@ This is an example of rendering Signed Distance Field Fonts in MonoGame.
 > [!TIP]
 > We set the **Scale** value last because the larger the scale, the longer Hiero takes to render the preview.  By keeping it at 1 while adjusting the other settings, the setting the **Scale** last, you won't get as many UI freezes while it rasterizes the preview.
 
+![Set Values](./images/set-values.png)
+
 6. Click **File** then **Save BMFont files (text)** from the top menu and to export it.  This will export a `.fnt` file and the associated `.png` texture files that go with it.
 
 ![Export BMFont File](./images//export.png)
