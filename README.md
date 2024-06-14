@@ -1,11 +1,11 @@
 # MonoGame SDF Fonts
 This is an example of rendering Signed Distance Field Fonts in MonoGame.
 
-## How to use.
+## How to Install.
 1. Clone the source for this repository
 2. Add a reference to `/source/MonoGame.Sdf.Fonts/MonoGame.Sdf/Fonts.csproj` in your MonoGame project
 3. Add the `/source/MonoGame.Sdf.Fonts/sdf-effect.fx` effect file to your project using the MGCB Editor.
-4. Add the `.fnt` file and it's associated textures to your project using the MGCB Editor, but set their build action to **Copy** (even the texture).  See the section below for how to generate these files for use.
+
 
 ## How to Create a Distance Field Font
 1. Download the [libGDX Hiero](https://libgdx.com/wiki/tools/hiero) application and run it.
@@ -35,6 +35,42 @@ This is an example of rendering Signed Distance Field Fonts in MonoGame.
 6. Click **File** then **Save BMFont files (text)** from the top menu and to export it.  This will export a `.fnt` file and the associated `.png` texture files that go with it.
 
 ![Export BMFont File](./images//export.png)
+
+## How To Use
+
+1. Add the `.fnt` file and it's associated textures to your project using the MGCB Editor, but set their build action to **Copy** (even the texture).  See the section above for how to generate these files for use.
+2. Wherever you load your content, load the `.fnt` file and the `sdf-effect` shader
+
+```cs
+//  Load the .fnt file from disk
+using (FileStream stream = TitleContainer.OpenStream("Content/my-font.fnt") as FileStream)
+{
+   _font = BitmapFont.FromStream(GraphicsDevice, stream);
+}
+
+//  Load the SDF font shader effect
+_sdfEffect = Content.Load<Effect>("sdf-effect");
+```
+
+3. Before rendering, set the required **Spread** and **Scale** properties of the effect
+
+```cs
+// Spread is the spread value you set in Hiero
+_sdfEffect.Parameters["Spread"].SetValue(4.0f);
+
+// Scale is the scale at which you are rendering the font when using the SpriteBatch.DrawString command
+_sdfEffect.Parameters["Scale"].SetValue(1.0f);
+```
+
+4. Finally, load the effect as the parameter in the `SpriteBatch.Begin` then render your text using the `SpriteBatch.DrawString` extension methods
+
+```cs
+_spriteBatch.Begin(effect: _sdfEffect);
+_spriteBatch.DrawString(_bitmapFont, "Hello World", new Vector2(0, 100), Color.White, 0.0f, Vector2.Zero, scale: 5.0f, 0);
+_spriteBatch.End();
+```
+
+See the [example project](./example/Game1.cs) for a complete example of how to use.
 
 ## License
 **MonoGame.Sdf.Fonts** is licensed under the **MIT License**. Please refer to the [LICENSE](./LICENSE) file for full license text.
