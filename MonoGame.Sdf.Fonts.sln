@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Sdf.Fonts", "source\MonoGame.Sdf.Fonts\MonoGame.Sdf.Fonts.csproj", "{990DEDF6-A285-4027-9543-A5BC9BC18359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdfFontExample", "example\SdfFontExample.csproj", "{6181C1FE-E02C-4F6E-8446-2535DE71F91F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{990DEDF6-A285-4027-9543-A5BC9BC18359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990DEDF6-A285-4027-9543-A5BC9BC18359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990DEDF6-A285-4027-9543-A5BC9BC18359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990DEDF6-A285-4027-9543-A5BC9BC18359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6181C1FE-E02C-4F6E-8446-2535DE71F91F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6181C1FE-E02C-4F6E-8446-2535DE71F91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6181C1FE-E02C-4F6E-8446-2535DE71F91F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6181C1FE-E02C-4F6E-8446-2535DE71F91F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

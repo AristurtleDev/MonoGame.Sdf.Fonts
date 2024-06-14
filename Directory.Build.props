@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <SolutionDirectory>$(MSBuildThisFileDirectory)</SolutionDirectory>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>0.0.1</Version>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Authors>Christopher Whitley and contributors.</Authors>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- path must be relative to the individual csproj's not this .targets file -->
+        <None Include="../../README.md" Pack="false" PackagePath="" />
+    </ItemGroup>
+
+    <!-- Setup Code Analysis using the .editorconfig file -->
+    <PropertyGroup>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+        <AnalysisLevel>latest</AnalysisLevel>
+        <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+        <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+        <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+        <WarningsAsErrors>nullable</WarningsAsErrors>
+    </PropertyGroup>
+
+</Project>
